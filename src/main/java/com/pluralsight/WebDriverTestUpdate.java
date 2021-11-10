@@ -14,6 +14,6 @@ public class WebDriverTestUpdate {
 		
 		System.out.println("aaa");
 		System.out.println("again");
-		System.out.println("wer");
+		System.out.println("and");
 	}
 }
