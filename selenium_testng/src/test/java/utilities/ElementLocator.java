@@ -15,6 +15,7 @@ public class ElementLocator {
 			
 		case "id":
 			return BaseTest.driver.findElement(By.id(value));
+		//testRyan
 		case "class":
 			return BaseTest.driver.findElement(By.className(value));
 		case "xpath":
