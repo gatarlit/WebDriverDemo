@@ -1,5 +1,8 @@
 package pageObjects;
 
 public interface HomePageObjects {
-	String signInButton = "login-button";
+	String signInButtonID = "login-button";
+	String usernameID = "user-name";
+	String passwordID = "password";
+	 
 }
