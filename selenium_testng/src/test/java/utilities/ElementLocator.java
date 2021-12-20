@@ -11,36 +11,46 @@ public class ElementLocator {
 
 	//get single web element
 	public WebElement getWebElement(String type, String value) {
+		WebElement element = null;
 		switch (type) {
 			
 		case "id":
-			return BaseTest.driver.findElement(By.id(value));
-		//testRyan
+			element = BaseTest.driver.findElement(By.id(value));
+			break;
+		case "className":
 		case "class":
-			return BaseTest.driver.findElement(By.className(value));
+			element = BaseTest.driver.findElement(By.className(value));
+			break;
 		case "xpath":
-			return BaseTest.driver.findElement(By.xpath(value));
+			element = BaseTest.driver.findElement(By.xpath(value));
+			break;
 		case "css":
-			return BaseTest.driver.findElement(By.cssSelector(value));
-		default:
-			return null;
+			element = BaseTest.driver.findElement(By.cssSelector(value));
+			break;
 		}
+		return element;
 	}
 	
 	//get list or group of elements
 	public List<WebElement> getListWebElement(String type, String value) {
+		
+		List<WebElement> webElementList = null;
 		switch (type) {
 			
 		case "id":
-			return BaseTest.driver.findElements(By.id(value));
+			webElementList = BaseTest.driver.findElements(By.id(value));
+			break;
+		case "className":
 		case "class":
-			return BaseTest.driver.findElements(By.className(value));
+			webElementList = BaseTest.driver.findElements(By.className(value));
+			break;
 		case "xpath":
-			return BaseTest.driver.findElements(By.xpath(value));
+			webElementList = BaseTest.driver.findElements(By.xpath(value));
+			break;
 		case "css":
-			return BaseTest.driver.findElements(By.cssSelector(value));
-		default:
-			return null;
+			webElementList = BaseTest.driver.findElements(By.cssSelector(value));
+			break;
 		}
+		return webElementList;
 	}
 }

@@ -3,24 +3,17 @@
 <suite parallel="none" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test" verbose="2">
     <classes>
-      <class name="utilities.SuiteListener"/>
-      <class name="test.LoginTest"/>
-      <class name="utilities.RetryAnalyzer"/>
-      <class name="pageEvents.HomePage"/>
-      <class name="pageObjects.HomePageObjects"/>
-      <class name="utilities.ElementLocator"/>
-      <class name="test.BaseTest"/>
-      <class name="utilities.Constants"/>
+      <class name="test.ProductsTest"/>
     </classes>
   </test> <!-- Default test -->
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="test.LoginTest">
+      <class name="test.ProductsTest">
         <methods>
-          <include name="Login"/>
+          <include name="clickProductImageTest"/>
           <include name="doBeforeTest"/>
         </methods>
-      </class> <!-- test.LoginTest -->
+      </class> <!-- test.ProductsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
